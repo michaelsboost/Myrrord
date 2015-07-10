@@ -22,17 +22,17 @@ a {
 .head {
   width: 100%;
   height: 100%;
-  background-image: url("../girl_enjoying_the_freedom_in_a_wasteland_by_macinivnw-d68mwd5.jpg");
+  background-image: url("../abstract-hd-wallpapers-1080p.jpg");
   background-position: center center;
   background-repeat: no-repeat;
 }
 .column > header {
   display: table;
   position: absolute;
-  width: 100%;
   height: 100%;
   background: #000;
-  background: rgba(34, 108, 55, 0.64);
+  /* background: rgb(10, 25, 48); */
+  background: rgba(10, 25, 48, 0.64);
   color: #fff;
   text-align: center;
   overflow: hidden;
@@ -93,7 +93,6 @@ input[type=text]:focus {
 
 /* Features/Preview */
 .preview {
-  width: 100%;
   height: 100%;
   background-position: top left;
   background-repeat: no-repeat;
@@ -107,23 +106,6 @@ input[type=text]:focus {
   display: none;
 }
 
-/* Webcam */
-.view {
-  width: 320px;
-  height: 240px;
-}
-.view[data-active="false"] > video,
-.view[data-active="true"] > button {
-  display: none;
-}
-
-video {
-  display: block;
-  background: #F06;
-  transform-origin: top left;
-  -webkit-app-region: drag;
-}
-
-.install:not(.show-install) {
-  display: none;
+.fill, .preview, .column > header {
+  width: 100%;
 }

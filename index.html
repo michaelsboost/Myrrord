@@ -41,6 +41,10 @@
             <a class="check export-as-lin-app hide" title="Export for Linux">
               <i class="fa fa-linux"></i>
             </a>
+            
+            <a class="check export-as-chrome-app hide" title="Export for Google Chrome">
+              <i class="fa msicon-chrome"></i>
+            </a>
         
             <a class="check hide" title="Export for tablets and smart phones" href="http://build.phonegap.com/" target="_blank">
               <i class="fa fa-mobile"></i>
@@ -50,19 +54,26 @@
               <i class="fa fa-code"></i>
             </a>
             
-<!--
-            <a title="Download Chrome Application">
-              <i class="fa msicon-chrome"></i>
-            </a>
--->
-            
-            <a class="check hide" title="Download the source code" href="https://github.com/mikethedj4/Myrrord" target="_blank">
+            <a title="Download the source code" href="https://github.com/mikethedj4/Myrrord" target="_blank">
               <i class="fa fa-github"></i>
             </a>
             
             <a title="Keep the project alive" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BSYGA2RB5ZJCC" target="_blank">
               <i class="fa fa-paypal"></i>
             </a>
+            
+            <a title="Import Application Logo" class="load-logo">
+              <i class="fa fa-upload"></i>
+            </a>
+            
+            <input class="load hide" type="file" accept="image/jpeg, image/png" />
+            
+            <div class="fill chrome-logo check hide" align="center">
+              <canvas class="n16 hide" width="16" height="16"></canvas>
+              <canvas class="n32 hide" width="32" height="32"></canvas>
+              <canvas class="n64 hide" width="64" height="64"></canvas>
+              <canvas class="holder" width="128" height="128"></canvas>
+            </div>
             
             <p>
               <input class="appname" type="text" placeholder="Application name"> 

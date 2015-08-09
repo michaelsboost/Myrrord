@@ -111,3 +111,7 @@ input[type=text]:focus {
 .fill, .preview, .column > header {
   width: 100%;
 }
+
+.alertify-logs a {
+  color: #70feff;
+}

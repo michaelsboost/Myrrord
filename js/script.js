@@ -87,8 +87,6 @@ $(document).ready(function() {
       } else if (AppUrl.toLowerCase().substring(0,8) === "https://") {
         $(".export-as-chrome-app").addClass("hide");
         alertify.log("AppUrl must not contain \"https\".<br /><br /> If needed use <a href=\"https://bitly.com/shorten/\">Bitly</a> to set url to http.");
-      } else {
-        $(".check").removeClass("hide");
       }
     }
   });

@@ -1,5 +1,5 @@
 # Myrrord
-Convert any website to a native Windows, Linux, or Mac OS X desktop application.
+Convert any website to a native Windows, Linux, Mac, or Chrome desktop application.
 
 ### Version
 1.0.2

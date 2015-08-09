@@ -1,4 +1,6 @@
 @import url("normalize.css");
+@import url("alertify.core.css");
+@import url("alertify.default.css");
 @import url("fonts/font-awesome.css");
 @import url("fonts/macset.css");
 
@@ -10,7 +12,7 @@ html, body {
 
 body {
   background: rgb(0, 28, 66);
-  font: 20px 'Open Sans',helvetica, arial, sans-serif;
+  font: 16px 'Open Sans', helvetica, arial, sans-serif;
 }
 
 a {

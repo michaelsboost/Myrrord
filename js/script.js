@@ -51,6 +51,13 @@ $(document).ready(function() {
   } else {
     alert("The File APIs are not fully supported in this browser.");
   }
+    
+  if (loader.val() === "") {
+    $(".chrome-logo").css({
+      "width": "0",
+      "height": "0"
+    });
+  }
   
   // Application Fields (App Name and URL)
   $("input").on("keyup change", function() {
@@ -60,10 +67,29 @@ $(document).ready(function() {
         
     $(".zipname").val(AppName).val($(".zipname").val().split(" ").join(""));
     
+    if (AppImg === "") {
+      $(".chrome-logo").css({
+        "width": "0",
+        "height": "0"
+      });
+    } else {
+      $(".chrome-logo").css({
+        "width": "",
+        "height": ""
+      });
+    }
+    
     if ((AppName === "") || (AppUrl === "") || (AppImg === "")) {
       $(".check").addClass("hide");
     } else {
-      $(".check").removeClass("hide");
+      if (AppUrl.toLowerCase().substring(0,7) === "http://") {
+        $(".check").removeClass("hide");
+      } else if (AppUrl.toLowerCase().substring(0,8) === "https://") {
+        $(".export-as-chrome-app").addClass("hide");
+        alertify.log("AppUrl must not contain \"https\".<br /><br /> If needed use <a href=\"https://bitly.com/shorten/\">Bitly</a> to set url to http.");
+      } else {
+        $(".check").removeClass("hide");
+      }
     }
   });
 
@@ -157,7 +183,7 @@ $(document).ready(function() {
         // Your Web App
         var Img128 = canvas[0].toDataURL("image/png");
         zip.file("assets/logo.png", Img128.split('base64,')[1],{base64: true});
-        zip.file("background.js", "/**\n * Listens for the app launching, then creates the window.\n *\n * @see http://developer.chrome.com/apps/app.runtime.html\n * @see http://developer.chrome.com/apps/app.window.html\n */\nchrome.app.runtime.onLaunched.addListener(function(launchData) {\n  chrome.app.window.create(\n    'index.html',\n    {\n      id: 'mainWindow',\n      bounds: {width: 800, height: 600}\n    }\n  );\n});");
+        zip.file("background.js", "/**\n * Listens for the app launching, then creates the window.\n *\n * @see http://developer.chrome.com/apps/app.runtime.html\n * @see http://developer.chrome.com/apps/app.window.html\n */\nchrome.app.runtime.onLaunched.addListener(function(launchData) {\n  chrome.app.window.create(\n    'index.html',\n    {\n      id: 'mainWindow',\n      innerBounds: {\n        'width': 800,\n        'height': 600\n      }\n    }\n  );\n});");
         zip.file("manifest.json", '{\n  "manifest_version": 2,\n  "name": "'+ $(".zipname").val() +'",\n  "short_name": "'+ $(".zipname").val() +'",\n  "description": "A native '+ $(".zipname").val() +' standalone webview app for your Chrome Browser.",\n  "version": "1.0",\n  "minimum_chrome_version": "38",\n  "permissions":[ "webview", "storage", "fileSystem", "unlimitedStorage", "http://*/", "https://*/" ],\n  "icons": {\n    "16": "assets/logo.png",\n    "48": "assets/logo.png",\n    "64": "assets/logo.png",\n    "128": "assets/logo.png"\n  },\n\n  "app": {\n    "background": {\n      "scripts": ["background.js"]\n    }\n  }\n}\n');
         zip.file("css/style.css", "html, body {\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  height: 100%;\n}\n\nwebview {\n  width: 100%;\n  height: 100%;\n}");
         zip.file("index.html", "<!DOCTYPE html>\n<html>\n  <head>\n    <title>"+ $(".zipname").val() +"</title>\n    <link rel=\"stylesheet\" href=\"css/style.css\" />\n  </head>\n  <body>\n    <webview src=\""+ $(".appurl").val() +"\">\n      Your Chromebook does not support the WebView html5 element.\n    </webview>\n  </body>\n</html>");

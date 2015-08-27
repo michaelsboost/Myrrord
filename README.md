@@ -18,7 +18,7 @@ MIT
 **Free Software, Hell Yeah!**
 - [WebDGap](http://webdgap.sourceforge.net/)
 - [kodeWeave](http://kodeweave.sourceforge.net/)
-- [Koding](http://koding.com/)
+- [Koding](https://koding.com/R/mikethedj4)
 - [AngularJS](http://angularjs.org)
 - [jQuery](http://jquery.com)
 - [Codemirror](http://codemirror.net/)

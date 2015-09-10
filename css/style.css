@@ -24,7 +24,7 @@ a {
 .head {
   width: 100%;
   height: 100%;
-  background-image: url("../abstract-hd-wallpapers-1080p.jpg");
+  background-image: url("../galaxy_touch_hd-1920x1200.jpg");
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -40,7 +40,7 @@ a {
   overflow: hidden;
   font-size: 16px;
 }
-.column > header a {
+.column > header a:not(.load-logo) {
   color: #fff;
   font-size: 3em;
 }
@@ -49,14 +49,15 @@ nav {
   vertical-align: middle;
   z-index: 1;
 }
-p a.donate, p input[type=text] {
+p a.donate, div input[type=text] {
   background: rgb(66, 66, 255);
   background: rgba(255, 255, 255, 0.3);
-  padding: .6em;
+  padding: .8em;
   font-size: 100%;
   color: #FCFDFE;
   border-radius: 10px;
   border: 0;
+  margin: .5em 0;
 }
 
 ::-webkit-input-placeholder {
@@ -106,6 +107,15 @@ input[type=text]:focus {
 /* Misc */
 .hide {
   display: none;
+}
+
+#imageloader {
+  border: 10px dashed #ccc;
+  text-align: center;
+  padding: 1em 0;
+}
+#imageloader.hover {
+  border: 10px dashed #4F7E9C;
 }
 
 .fill, .preview, .column > header {

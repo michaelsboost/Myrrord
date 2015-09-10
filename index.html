@@ -15,8 +15,10 @@
     <script src="dist/jszip.min.js"></script>
     <script src="dist/jszip-utils.js"></script>
     <script src="dist/FileSaver.js"></script>
+    <!-- 
     <link href="http://fonts.googleapis.com/css?family=Cookie&amp;text=tweenui" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin" type="text/css">
+    -->
   </head>
   <body>
     <!-- Image to show on facebook preview -->
@@ -63,24 +65,30 @@
               <i class="fa fa-paypal"></i>
             </a>
             
-            <a title="Import Application Logo" class="load-logo">
+            <a title="Import Application Logo" class="load-logo hide">
               <i class="fa fa-upload"></i>
             </a>
             
+            <div class="checkimageloader hide">
+              <div id="imageloader">
+                Drag and drop image <a class="load-logo"><u>here</u></a>
+              </div> 
+            </div>
+            
             <input class="load hide" type="file" accept="image/jpeg, image/png" />
             
-            <div class="fill chrome-logo" align="center">
+            <div class="fill logo hide" align="center">
               <canvas class="n16 hide" width="16" height="16"></canvas>
               <canvas class="n32 hide" width="32" height="32"></canvas>
               <canvas class="n64 hide" width="64" height="64"></canvas>
               <canvas class="holder" width="128" height="128"></canvas>
             </div>
             
-            <p>
+            <div>
               <input class="appname" type="text" placeholder="Application name"> 
               <input class="zipname hide" type="text"> 
               <input class="appurl" type="text" placeholder="http://website.com/">
-            </p>
+            </div>
           </p>
         </nav>
       </header>

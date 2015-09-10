@@ -2,7 +2,7 @@
 Convert any website to a native Windows, Linux, Mac, or Chrome desktop application.
 
 ### Version
-1.0.3
+1.0.4
 
 ### Tech
 
@@ -10,12 +10,14 @@ Myrrord uses a number of open source projects to work properly:
 
 * [jQuery](http://jquery.com/) - duh
 * [JSZip](https://stuk.github.io/jszip/) - package zip files in javascript
-* [AppJS](http://appjs.com/) - run web apps as desktop apps (comes with [node.js](https://nodejs.org/))
+* [Electron](http://electron.atom.io/) - run web apps as desktop apps
+* [node-webkit](http://nwjs.io/) - run web apps as desktop apps
 
 ### License
 MIT
 
-**Free Software, Hell Yeah!**
+### Free Software, Hell Yeah!  
+
 - [WebDGap](http://webdgap.sourceforge.net/)
 - [kodeWeave](http://kodeweave.sourceforge.net/)
 - [Koding](https://koding.com/R/mikethedj4)
@@ -28,6 +30,6 @@ MIT
 - [Poly UI Kit](https://github.com/Guilh/Poly)
 - [CodePen](http://codepen.io/mikethedj4)
 
-**Team**
+### Author
 
 - [michael schwartz](http://mikethedj4.github.io/)

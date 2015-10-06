@@ -2,7 +2,7 @@
 Convert any website to a native Windows, Linux, Mac, or Chrome desktop application.
 
 ### Version
-1.0.6
+1.0.7
 
 ### Tech
 

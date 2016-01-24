@@ -1,7 +1,8 @@
-# Myrrord has merged with [kodeWeave](http://kodeweave.sourceforge.net/webdgap/)
+# Myrrord has merged with [WebDGap](http://webdgap.sourceforge.net/)
 
 ### Free Software, Hell Yeah!  
 
+- [WebDGap](http://webdgap.sourceforge.net/)
 - [kodeWeave](http://kodeweave.sourceforge.net/)
 - [Koding](https://koding.com/R/mikethedj4)
 - [AngularJS](http://angularjs.org)
